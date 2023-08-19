@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "e333799b-f7a2-416f-a5c7-fa98a420cc3a",
+		"name": "classroom",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28240354"
+	},
+	"item": [
+		{
+			"name": "clases",
+			"item": [
+				{
+					"name": "obtener clase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/clases/64deff2fd102f95c81c0e468",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64deff2fd102f95c81c0e468"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar comentario a anuncio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"Vegeta\",\r\n    \"mensaje\":\"Mensaje de prueba\",\r\n    \"fecha\":\"12/12/2012\",\r\n    \"hora\":\"10:15am\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/clases/64df045ed102f95c81c0e46a/anuncios/2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64df045ed102f95c81c0e46a",
+								"anuncios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener anuncios de clase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/clases/64df045ed102f95c81c0e46b/anuncios",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64df045ed102f95c81c0e46b",
+								"anuncios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener comentarios de un anuncio",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/clases/64df045ed102f95c81c0e46a/anuncios/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64df045ed102f95c81c0e46a",
+								"anuncios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener asignaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/clases/64df045ed102f95c81c0e46c/asignaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64df045ed102f95c81c0e46c",
+								"asignaciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener participantes de una clase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/clases/64df045ed102f95c81c0e46b/participantes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64df045ed102f95c81c0e46b",
+								"participantes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "agregar participante a clase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"64dff3ceb4b89c882f1fd498\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/clases/64df045ed102f95c81c0e46c/participantes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clases",
+								"64df045ed102f95c81c0e46c",
+								"participantes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "intructores",
+			"item": [
+				{
+					"name": "obtener Instructor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/instructores/64deaa17d102f95c81c0e45b",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"instructores",
+								"64deaa17d102f95c81c0e45b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar Instructor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"usuario\":\"JuanPerex\",\r\n    \"password\":\"1234\",\r\n    \"nombre\":\"Juan\",\r\n    \"imagen\":\"123\",  \r\n    \"clases\":[] \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/instructores",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"instructores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener intructores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/instructores",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"instructores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "participantes",
+			"item": [
+				{
+					"name": "guardar participante",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

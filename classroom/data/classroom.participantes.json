@@ -1,0 +1,126 @@
+[{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd493"
+  },
+  "nombre": "Vegeta",
+  "imagen": "../assets/img/profile-pics/vegeta.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46c"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd494"
+  },
+  "nombre": "Bulma",
+  "imagen": "../assets/img/profile-pics/bulma.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd495"
+  },
+  "nombre": "Yamcha",
+  "imagen": "../assets/img/profile-pics/yamcha.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd496"
+  },
+  "nombre": "Gohan",
+  "imagen": "../assets/img/profile-pics/gohan.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46a"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46c"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd497"
+  },
+  "nombre": "Cell",
+  "imagen": "../assets/img/profile-pics/cell.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46c"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46a"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd498"
+  },
+  "nombre": "Baby",
+  "imagen": "../assets/img/profile-pics/baby.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46a"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd499"
+  },
+  "nombre": "kami",
+  "imagen": "../assets/img/profile-pics/kami.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd49a"
+  },
+  "nombre": "Roshi",
+  "imagen": "../assets/img/profile-pics/roshi.jpg",
+  "clases": [
+    {
+      "$oid": "64dff3ceb4b89c882f1fd49a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64dff3ceb4b89c882f1fd49b"
+  },
+  "nombre": "Videl",
+  "imagen": "../assets/img/profile-pics/videl.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+}]

@@ -1,0 +1,299 @@
+[{
+  "_id": {
+    "$oid": "64df045ed102f95c81c0e46c"
+  },
+  "seccion": "2002",
+  "nombreClase": "Arte Contemporáneo",
+  "banner": "../assets/img/backgrounds/img_read.jpg",
+  "descripcion": "Explorando las tendencias artísticas modernas",
+  "aula": "103",
+  "asignaciones": [
+    {
+      "id": 7,
+      "titulo": "Análisis de una Obra",
+      "fecha": "2023-08-28",
+      "hora": "10:00am",
+      "puntos": "12"
+    },
+    {
+      "id": 8,
+      "titulo": "Creación de una Pieza",
+      "fecha": "2023-09-02",
+      "hora": "03:00pm",
+      "puntos": "15"
+    },
+    {
+      "id": 9,
+      "titulo": "Presentación sobre Movimientos Artísticos",
+      "fecha": "2023-09-10",
+      "hora": "01:30pm",
+      "puntos": "18"
+    }
+  ],
+  "anuncios": [
+    {
+      "id": 7,
+      "mensaje": "¡Bienvenidos a la clase de Arte Contemporáneo!",
+      "fecha": "2023-08-16",
+      "hora": "11:30am",
+      "comentarios": [
+        {
+          "usuario": "EstudianteArte1",
+          "mensaje": "¡Será emocionante explorar las tendencias actuales!",
+          "fecha": "2023-08-16",
+          "hora": "11:45am"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "mensaje": "Recuerden traer sus materiales para la próxima clase.",
+      "fecha": "2023-08-30",
+      "hora": "02:30pm",
+      "comentarios": [
+        {
+          "usuario": "EstudianteArte2",
+          "mensaje": "¿Necesitamos algún material específico?",
+          "fecha": "2023-08-30",
+          "hora": "02:45pm"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "mensaje": "¡Felicidades a todos por las increíbles presentaciones!",
+      "fecha": "2023-09-12",
+      "hora": "04:15pm",
+      "comentarios": []
+    }
+  ],
+  "participantes": [
+    {
+      "$oid": "64dff3ceb4b89c882f1fd493"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd494"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd495"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd496"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd497"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd498"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64df045ed102f95c81c0e46a"
+  },
+  "seccion": "1000",
+  "nombreClase": "POO",
+  "banner": "../assets/img/backgrounds/img_breakfast.jpg",
+  "descripcion": "Clase de programación orientada a Objetos",
+  "aula": "101",
+  "asignaciones": [
+    {
+      "id": 1,
+      "titulo": "Tarea 1",
+      "fecha": "12/12/2012",
+      "hora": "06:00pm",
+      "puntos": "5"
+    },
+    {
+      "id": 2,
+      "titulo": "Proyecto de Historia",
+      "fecha": "2023-08-20",
+      "hora": "03:30pm",
+      "puntos": "15"
+    },
+    {
+      "id": 3,
+      "titulo": "Lectura de Literatura",
+      "fecha": "2023-08-18",
+      "hora": "08:00pm",
+      "puntos": "8"
+    }
+  ],
+  "anuncios": [
+    {
+      "id": 1,
+      "mensaje": "Esto es un mensaje de prueba",
+      "fecha": "12/12/2012",
+      "hora": "06:00pm",
+      "comentarios": [
+        {
+          "usuario": "Vegeta",
+          "mensaje": "Esto es un segundo mensaje de prueba",
+          "fecha": "12/12/2012",
+          "hora": "06:00pm"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "mensaje": "Recuerden que la reunión es mañana a las 3pm.",
+      "fecha": "2023-08-18",
+      "hora": "02:00pm",
+      "comentarios": [
+        {
+          "usuario": "Piccolo",
+          "mensaje": "¡Gracias por la información!",
+          "fecha": "2023-08-18",
+          "hora": "02:15pm"
+        },
+        {
+          "usuario": "Bulma",
+          "mensaje": "¿Dónde será la reunión?",
+          "fecha": "2023-08-18",
+          "hora": "02:30pm"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "mensaje": "¡Feliz cumpleaños, Krillin!",
+      "fecha": "2023-08-19",
+      "hora": "09:00am",
+      "comentarios": [
+        {
+          "usuario": "Yamcha",
+          "mensaje": "¡Feliz cumpleaños, amigo!",
+          "fecha": "2023-08-19",
+          "hora": "09:15am"
+        },
+        {
+          "usuario": "Tien",
+          "mensaje": "¡Espero que tengas un gran día!",
+          "fecha": "2023-08-19",
+          "hora": "09:30am"
+        },
+        {
+          "usuario": "Chiaotzu",
+          "mensaje": "¡Mis mejores deseos para ti!",
+          "fecha": "2023-08-19",
+          "hora": "09:45am"
+        },
+        {
+          "usuario": "Vegeta",
+          "mensaje": "Mensaje de prueba",
+          "fecha": "12/12/2012",
+          "hora": "10:15am"
+        }
+      ]
+    }
+  ],
+  "__v": 1,
+  "participantes": [
+    {
+      "$oid": "64dff3ceb4b89c882f1fd496"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd497"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd498"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64df045ed102f95c81c0e46b"
+  },
+  "seccion": "1001",
+  "nombreClase": "Programación",
+  "banner": "../assets/img/backgrounds/img_bookclub.jpg",
+  "descripcion": "Clase introductoria sobre programación",
+  "aula": "102",
+  "asignaciones": [
+    {
+      "id": 4,
+      "titulo": "Ejercicio de Variables",
+      "fecha": "2023-08-21",
+      "hora": "11:00am",
+      "puntos": "7"
+    },
+    {
+      "id": 5,
+      "titulo": "Tarea 2: Condicionales",
+      "fecha": "2023-08-25",
+      "hora": "02:30pm",
+      "puntos": "10"
+    },
+    {
+      "id": 6,
+      "titulo": "Proyecto Final",
+      "fecha": "2023-09-05",
+      "hora": "04:00pm",
+      "puntos": "20"
+    }
+  ],
+  "anuncios": [
+    {
+      "id": 4,
+      "mensaje": "¡Bienvenidos a la clase de Introducción a la Programación!",
+      "fecha": "2023-08-17",
+      "hora": "10:00am",
+      "comentarios": [
+        {
+          "usuario": "Estudiante1",
+          "mensaje": "¡Emocionado por empezar!",
+          "fecha": "2023-08-17",
+          "hora": "10:15am"
+        },
+        {
+          "usuario": "usuariox",
+          "mensaje": "hola",
+          "fecha": "x",
+          "hora": "10:11 PM"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "mensaje": "Recordatorio: Examen parcial el próximo viernes.",
+      "fecha": "2023-08-24",
+      "hora": "09:30am",
+      "comentarios": [
+        {
+          "usuario": "Estudiante2",
+          "mensaje": "¿Qué temas incluirá el examen?",
+          "fecha": "2023-08-24",
+          "hora": "09:45am"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "mensaje": "¡Felicidades a todos por terminar el proyecto final!",
+      "fecha": "2023-09-06",
+      "hora": "05:00pm",
+      "comentarios": []
+    }
+  ],
+  "participantes": [
+    {
+      "$oid": "64dff3ceb4b89c882f1fd496"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd497"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd498"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd499"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd49a"
+    },
+    {
+      "$oid": "64dff3ceb4b89c882f1fd49b"
+    }
+  ]
+}]

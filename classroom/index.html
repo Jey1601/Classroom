@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title>Google Classroom</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <!-- Area colapsable de las miniaturas de los cursos -->
+  <div class="collapse bg-light" id="navbarCourses">
+    <div class="container-fluid">
+      <div id="contenedorMiniaturaClases" class="row">
+        <!-- Miniaturas de clases -->
+        <div class="col-2 py-4">
+          <div class="card">
+            <div class="card-body course-thumb" onclick="showClass('POO')" style="background-image: url(assets/img/backgrounds/img_read.jpg);">
+              <h5 class="text-white">POO</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Miniaturas de clases -->
+        <div class="col-2 py-4">
+          <div class="card">
+            <div class="card-body course-thumb" onclick="showClass('MM110')" style="background-image: url(assets/img/backgrounds/img_bookclub.jpg);">
+              <h5 class="text-white">MM110</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Miniaturas de clases -->
+        <div class="col-2 py-4">
+          <div class="card">
+            <div class="card-body course-thumb" onclick="showClass('AI')" style="background-image: url(assets/img/backgrounds/img_breakfast.jpg);">
+              <h5 class="text-white">AI</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Miniaturas de clases -->
+        <div class="col-2 py-4">
+          <div class="card">
+            <div class="card-body course-thumb" onclick="showClass('IS510')" style="background-image: url(assets/img/backgrounds/img_code.jpg);">
+              <h5 class="text-white">IS510</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Miniaturas de clases -->
+        <div class="col-2 py-4">
+          <div class="card">
+            <div class="card-body course-thumb" onclick="showClass('DW')" style="background-image: url(assets/img/backgrounds/img_graduation.jpg);">
+              <h5 class="text-white">DW</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container text-center">
+      <button class="btn btn-primary">Agregar curso</button>
+    </div>
+    <hr class="mb-0">
+  </div>
+
+  <!-- Area colapsable de los instructores -->
+  <div class="collapse bg-light" id="navbarInstructors">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Miniaturas de clases -->
+        <div class="col-4 py-4"></div>
+        <div id="contenedorInstructores" class="col-8 py-4 d-flex" style="justify-content: flex-end;">
+          <img src="assets/img/profile-pics/gohan.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/vegeta.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/krilin.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/patricio.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/profile-pics/bulma.jpg" class="rounded-circle pp-small btn-circle">
+          <img src="assets/img/icons/add.png" class="rounded-circle pp-small btn-circle" title="Nuevo instructor">
+        </div>
+        <hr class="mb-0">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="navbar navbar-light bg-light shadow-sm">
+    <div class="d-flex px-4">
+      <button class="navbar-toggler mx-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCourses" aria-controls="navbarCourses" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img src="assets/img/icons/googlelogo_clr_74x24px.svg"> <span class="text-muted small">&nbsp;Classroom</span>
+      </a>
+    </div>
+    <div id="tabs" style="display: none;">
+      <span id="tab-clase" onclick="showTab('clase', 'tab-clase')" class="p-3 mx-2 tab-option active">Clase</span>
+      <span id="tab-asignaciones" onclick="showTab('asignaciones', 'tab-asignaciones')" class="p-3 mx-2 tab-option">Asignaciones</span>
+      <span id="tab-participantes" onclick="showTab('participantes', 'tab-participantes')" class="p-3 mx-2 tab-option">Participantes</span>
+    </div>
+    <div  class="mx-4 pt-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarInstructors" aria-controls="navbarInstructors" aria-expanded="false" aria-label="Toggle navigation">
+      <img id="imgIntructor" src="assets/img/profile-pics/goku.jpg" class="rounded-circle pp-small">
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Clases -->
+  <div class="album py-5 bg-light" style="display: block;" id="clases">
+    <div  class="container">
+
+      <div id="contenedorClases" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(assets/img/backgrounds/img_read.jpg);">
+              <span class="h3 text-white">POO</span><br>
+              <span class="small text-white">1300</span>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">Tarea 1</span><br>
+                <span class="small text-muted">12/12/2012</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" onclick="showClass('POO')" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(assets/img/backgrounds/img_bookclub.jpg);">
+              <span class="h3 text-white">MM110</span><br>
+              <span class="small text-white">1300</span>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">Tarea 1</span><br>
+                <span class="small text-muted">12/12/2012</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" onclick="showClass('MM110')" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(assets/img/backgrounds/img_breakfast.jpg);">
+              <span class="h3 text-white">AI</span><br>
+              <span class="small text-white">1300</span>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">Tarea 1</span><br>
+                <span class="small text-muted">12/12/2012</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" onclick="showClass('AI')" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(assets/img/backgrounds/img_code.jpg);">
+              <span class="h3 text-white">IS510</span><br>
+              <span class="small text-white">1300</span>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">Tarea 1</span><br>
+                <span class="small text-muted">12/12/2012</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" onclick="showClass('IS510')" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(assets/img/backgrounds/img_graduation.jpg);">
+              <span class="h3 text-white">DW</span><br>
+              <span class="small text-white">1300</span>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">Tarea 1</span><br>
+                <span class="small text-muted">12/12/2012</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" onclick="showClass('DW')" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-img-top w-full course-top p-2" style="background-image: url(assets/img/backgrounds/img_reachout.jpg);">
+              <span class="h3 text-white">SOI</span><br>
+              <span class="small text-white">1300</span>
+            </div>
+
+            <div class="card-body">
+              <p class="card-text">
+                <span class="text-dark">Tarea 1</span><br>
+                <span class="small text-muted">12/12/2012</span>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" onclick="showClass('SOI')" class="btn btn-sm btn-outline-secondary">Ver</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Participantes -->
+  <section class="py-5 container" style="display: none;" id="participantes">
+    <div class="row py-lg-5">
+      <div class="col-lg-12 mx-auto">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h1 class="blue-text">Estudiantes</h1>
+              <div class="container">
+                <div id="contenedorParticipantes" class="row">
+                  <div class="col-4">
+                    <p class="card-text p-2">
+                      <img src="assets/img/profile-pics/goten.png" class="rounded-circle pp">
+                      <span class="h6">Goten</span>
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <p class="card-text p-2">
+                      <img src="assets/img/profile-pics/mr_satan.jpg" class="rounded-circle pp">
+                      <span class="h6">Mr Satan</span>
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <p class="card-text p-2">
+                      <img src="assets/img/profile-pics/majinboo.jpg" class="rounded-circle pp">
+                      <span class="h6">Majimboo</span>
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <p class="card-text p-2">
+                      <img src="assets/img/profile-pics/dodoria.jpg" class="rounded-circle pp">
+                      <span class="h6">Dodoria</span>
+                    </p>
+                  </div>
+                  <div class="col-4">
+                    <p class="card-text p-2">
+                      <img src="assets/img/profile-pics/freezer.jpg" class="rounded-circle pp">
+                      <span class="h6">Freezer</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button type="button" data-bs-toggle="modal" data-bs-target="#agregarEstudianteModal"  class="btn btn-primary mt-2 ml-auto">Agregar estudiante</button>
+          </div>
+        </div>
+    </div>
+
+     <!-- Modal agregar Estudiante -->
+<!-- Modal -->
+<div class="modal fade" id="agregarEstudianteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Estudiante</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="NombreEstudiante" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="NombreEstudiante" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="urlImagenEstudiante" class="form-label">Digite Url de la imagen</label>
+            <input type="text" class="form-control" id="urlImagenEstudiante">
+          
+      </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button onclick="agregarEstudiante()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <!-- Asignaciones -->
+  <section class="py-5 container" style="display: none;" id="asignaciones">
+    <div class="row py-lg-5">
+      <div class="col-lg-12 mx-auto">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <h1 class="blue-text">Asignaciones</h1>
+              <div class="container">
+                <div  id="contenedorAsignaciones" class="row">
+                  <!-- Asignación 1 -->
+                  <div class="col-12">
+                    <p class="card-text p-2 d-flex align-items-center">
+                      <span class="rounded-circle icon-bg mx-2">
+                        <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M hhikbc" fill="#ffffff"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7z"></path><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"></path></svg>
+                      </span>
+                      <span class="h6 mx-2 mb-0">Tarea 1</span>
+                      <span class="small text-muted mx-2">12/12/2012 | 06:00pm | 5pts</span>
+                    </p>
+                  </div>
+                  <!-- Asignación 2 -->
+                  <div class="col-12">
+                    <p class="card-text p-2 d-flex align-items-center">
+                      <span class="rounded-circle icon-bg mx-2">
+                        <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M hhikbc" fill="#ffffff"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7z"></path><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"></path></svg>
+                      </span>
+                      <span class="h6 mx-2 mb-0">Tarea 2</span>
+                      <span class="small text-muted mx-2">12/12/2012 | 06:00pm | 5pts</span>
+                    </p>
+                  </div>
+                  <!-- Asignación 3 -->
+                  <div class="col-12">
+                    <p class="card-text p-2 d-flex align-items-center">
+                      <span class="rounded-circle icon-bg mx-2">
+                        <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M hhikbc" fill="#ffffff"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7z"></path><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"></path></svg>
+                      </span>
+                      <span class="h6 mx-2 mb-0">Tarea 3</span>
+                      <span class="small text-muted mx-2">12/12/2012 | 06:00pm | 5pts</span>
+                    </p>
+                  </div>
+                  <!-- Asignación 4 -->
+                  <div class="col-12">
+                    <p class="card-text p-2 d-flex align-items-center">
+                      <span class="rounded-circle icon-bg mx-2">
+                        <svg focusable="false" width="24" height="24" viewBox="0 0 24 24" class=" NMm5M hhikbc" fill="#ffffff"><path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7z"></path><path d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04a2.008 2.008 0 0 0-1.44 1.19c-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z"></path></svg>
+                      </span>
+                      <span class="h6 mx-2 mb-0">Tarea 4</span>
+                      <span class="small text-muted mx-2">12/12/2012 | 06:00pm | 5pts</span>
+                    </p>
+                  </div>                  
+                </div>
+              </div>
+              <button class="btn btn-primary mt-2 ml-auto">Agregar asignación</button>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- Contenido de clase -->
+  <section class="py-5 container" style="display: none;" id="clase">
+    
+    <div id="seccionClase" class="row py-lg-5">
+      <div class="col-lg-12 mx-auto">
+        <span class="btn btn-link" onclick="showClasses()">Ver clases</span>
+        <div class="card shadow-sm mb-3">
+          <div class="card-img-top w-full c-full p-5" style="background-image: url(assets/img/backgrounds/img_bookclub.jpg);">
+            <span class="h3 text-white">MM110</span><br>
+            <span class="small text-white">1300</span>
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              <span class="text-dark">Descripción: Clase de matemáticas</span><br>
+              <span class="small text-muted">Aula: 102</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Por evaluar -->
+          <div class="col-3">
+            <div class="card shadow-sm">
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="text-dark">Por evaluar</span><br>
+                  <hr>
+                  <ul >
+                    <li><span class="small text-muted">Tarea 1 (12/12/2012)</span></li>
+                    <li><span class="small text-muted">Tarea 2 (12/12/2012)</span></li>
+                    <li><span class="small text-muted">Tarea 3 (12/12/2012)</span></li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div  class="col-9"> <!--Boorar-->
+            <!-- Compartir con la clase -->
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <p class="card-text">
+                  
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <img src="assets/img/profile-pics/goku.jpg" class="rounded-circle pp-small">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="" id="" placeholder="Anunciar algo a tu clase">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comentarios Instructor -->
+            <div class="card shadow-sm mb-3">
+              <div class="card-body">
+                <p class="card-text">
+                  <img src="assets/img/profile-pics/goku.jpg" class="rounded-circle pp">
+                  <span class="h6">Goku</span>
+                  <span class="small text-muted">06:00pm</span>
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam qui beatae eveniet a assumenda possimus voluptatibus veritatis molestias laudantium aliquam porro, recusandae ea commodi voluptatum explicabo ad quo nostrum corrupti culpa. Eum expedita nobis iure nisi obcaecati alias facere natus velit magni tempora dolor, atque deserunt et rem nulla excepturi!
+                </p>
+                <hr>
+                <!-- Respuestas -->
+                <div class="ms-4">
+                  <p class="text-muted">
+                    <span class="h6">Gohan </span><span class="small text-muted">(12:00)</span> : Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, laborum.
+                  </p>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" name="" id="" placeholder="Nuevo comentario">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Send</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!--Boorar-->
+        </div><!--Tomar-->
+    </div><!--Tomar 1-->
+  </section>
+  
+  
+   <!-- Modal agregar Instructor -->
+<!-- Modal -->
+<div class="modal fade" id="agregarInstructorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Instructor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="NombreInstructor" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="NombreInstructor" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="urlImagenInstructor" class="form-label">Digite Url de la imagen</label>
+            <input type="text" class="form-control" id="urlImagenInstructor">
+          
+        </div><div class="mb-3">
+          <label for="UsuarioInstructor" class="form-label">Digite el Usuario</label>
+          <input type="text" class="form-control" id="UsuarioInstructor">
+        
+      </div><div class="mb-3">
+        <label for="passwordInstructor" class="form-label">Digite la contraseña</label>
+        <input type="password" class="form-control" id="passwordInstructor">
+      
+    </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button onclick="agregarInstructor()" data-bs-dismiss="modal" type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+
+
+  </main>
+
+ 
+
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  <script src="assets/js/controlador.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+      
+  </body>
+</html>

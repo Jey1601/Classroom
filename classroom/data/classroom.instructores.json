@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "64e018c6b4b89c882f1fd4a4"
+  },
+  "usuario": "Trunks",
+  "password": "1234",
+  "nombre": "Trunks",
+  "imagen": "../assets/img/profile-pics/trunks.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46a"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64e10dd97d2fbc2f26e3a2a4"
+  },
+  "usuario": "ubb",
+  "password": "1234",
+  "nombre": "ubb",
+  "imagen": "../assets/img/profile-pics/uub.jpg",
+  "clases": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64e10e9f82bc730813823b5e"
+  },
+  "usuario": "Videl",
+  "password": "1234",
+  "nombre": "Videl",
+  "imagen": "../assets/img/profile-pics/videl.jpg",
+  "clases": [
+    {
+      "$oid": "64df045ed102f95c81c0e46c"
+    },
+    {
+      "$oid": "64df045ed102f95c81c0e46a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "64e10f1c7d2fbc2f26e3a2ca"
+  },
+  "usuario": "Zarbon",
+  "password": "1234",
+  "nombre": "zarbon",
+  "imagen": "../assets/img/profile-pics/zarbon.jpg",
+  "clases": [],
+  "__v": 0
+}]
